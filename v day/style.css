@@ -1,0 +1,97 @@
+body {
+    background-color: #ffeef2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; /* Împiedică scroll-ul când fuge butonul */
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 85%; /* Ocupă mai mult spațiu pe mobil */
+    max-width: 400px;
+}
+
+h1 {
+    color: #ff4d6d;
+    font-size: 1.5rem; /* Text mai mic pe mobil */
+}
+
+#poza {
+    width: 100%; /* Imaginea devine responsivă */
+    max-width: 250px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Butoanele unul sub altul pe mobil */
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    position: relative;
+    height: 120px; /* Spațiu rezervat pentru mișcare */
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 150px; /* Lățime fixă pentru consistență */
+}
+
+#yesBtn {
+    background-color: #ff4d6d;
+    color: white;
+    z-index: 10; /* Să fie mereu deasupra */
+}
+
+#noBtn {
+    background-color: #888;
+    color: white;
+    transition: 0.1s; /* Mișcare mai fluidă */
+}
+
+.hidden {
+    display: none;
+}
+
+#Ronaldo
+{
+     width: 100%; /* Imaginea devine responsivă */
+    max-width: 250px;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Ajustări pentru ecrane foarte mici */
+@media (max-width: 400px) {
+    h1 { font-size: 1.2rem; }
+    .container { padding: 1.5rem; }
+}
+
+/* Adaugă asta la finalul fișierului style.css */
+
+@keyframes floatAround {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(100px, -150px); }
+    50% { transform: translate(-100px, 100px); }
+    75% { transform: translate(150px, 50px); }
+    100% { transform: translate(0, 0); }
+}
+
+.moving-mobile {
+    animation: floatAround 3s infinite linear;
+    position: relative;
+    z-index: 1;
+}
